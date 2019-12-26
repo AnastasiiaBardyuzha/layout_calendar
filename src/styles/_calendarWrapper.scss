@@ -1,0 +1,8 @@
+@import "_variables";
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: $width-cell*7 + $margin*7;
+}

@@ -1,48 +1,21 @@
+@import "_variables";
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
+  font-family: $calendar-font-family;
+  font-size: $calendar-font-size;
 }
 
 * {
   box-sizing: border-box;
 }
 
-$width-cell: 100px;
-$margin: 1px;
-$start-day: "tue", "wed", "thu", "fri", "sat", "sun";
-
-@mixin cell($width-cell, $height-cell) {
-  width: $width-cell;
-  height: $height-cell;
-  background-color: #eee;
-  border: 1px solid #000;
-  margin: 0 0 $margin $margin;
-  position: relative;
-  display: none;
-}
-
-.calendar {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  width: $width-cell*7 + $margin*7;
-}
-
-.calendar div::after {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.calendar > div {
-  @include cell(100px, 100px);
-}
+@import "_calendarCell";
+@import "_calendarWrapper";
+@import "_calendarAnimation";
 
 @for $i from 1 through 31 {
-  div:nth-child(#{$i})::after {
+  .calendar > div:nth-child(#{$i})::after {
     content: "#{$i}";
   }
 }
@@ -57,10 +30,4 @@ $start-day: "tue", "wed", "thu", "fri", "sat", "sun";
   .calendar-#{$i} div:nth-child(-n+#{$i}) {
     display: block;
   }
-}
-
-.calendar > div:hover {
-  margin-top: -20px;
-  background-color: pink;
-  transition: all 0.5s linear;
 }

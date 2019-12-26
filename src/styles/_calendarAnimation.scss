@@ -1,0 +1,7 @@
+@import "_variables";
+
+.calendar > div:hover {
+  margin-top: -20px;
+  background-color: pink;
+  transition: all 0.5s linear;
+}
