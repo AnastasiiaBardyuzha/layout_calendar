@@ -3,7 +3,7 @@
 @mixin cell($width-cell, $height-cell) {
   width: $width-cell;
   height: $height-cell;
-  background-color: $day-bgc;
+  background-color: $day-background-color;
   border: 1px solid #000;
   margin: 0 0 $margin $margin;
   position: relative;
@@ -12,6 +12,7 @@
 
 .calendar > div {
   @include cell(100px, 100px);
+  transition: all 0.5s linear;
 }
 
 .calendar div::after {
