@@ -14,7 +14,9 @@ body {
   border: 1px solid #000;
   margin: 0 0 1px 1px;
   position: relative;
-  display: none; }
+  display: none;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
 
 .calendar div::after {
   display: block;
@@ -34,10 +36,9 @@ body {
   width: 707px; }
 
 .calendar > div:hover {
-  margin-top: -20px;
-  background-color: pink;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  background-color: pink; }
 
 .calendar > div:nth-child(1)::after {
   content: "1"; }
