@@ -1,28 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 30px; }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-
-.calendar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: auto;
-  width: 707px; }
-
-.calendar div::after {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
 
 .calendar > div {
   width: 100px;
@@ -33,97 +16,120 @@ body {
   position: relative;
   display: none; }
 
-div:nth-child(1)::after {
+.calendar div::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  width: 707px; }
+
+.calendar > div:hover {
+  margin-top: -20px;
+  background-color: pink;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+
+.calendar > div:nth-child(1)::after {
   content: "1"; }
 
-div:nth-child(2)::after {
+.calendar > div:nth-child(2)::after {
   content: "2"; }
 
-div:nth-child(3)::after {
+.calendar > div:nth-child(3)::after {
   content: "3"; }
 
-div:nth-child(4)::after {
+.calendar > div:nth-child(4)::after {
   content: "4"; }
 
-div:nth-child(5)::after {
+.calendar > div:nth-child(5)::after {
   content: "5"; }
 
-div:nth-child(6)::after {
+.calendar > div:nth-child(6)::after {
   content: "6"; }
 
-div:nth-child(7)::after {
+.calendar > div:nth-child(7)::after {
   content: "7"; }
 
-div:nth-child(8)::after {
+.calendar > div:nth-child(8)::after {
   content: "8"; }
 
-div:nth-child(9)::after {
+.calendar > div:nth-child(9)::after {
   content: "9"; }
 
-div:nth-child(10)::after {
+.calendar > div:nth-child(10)::after {
   content: "10"; }
 
-div:nth-child(11)::after {
+.calendar > div:nth-child(11)::after {
   content: "11"; }
 
-div:nth-child(12)::after {
+.calendar > div:nth-child(12)::after {
   content: "12"; }
 
-div:nth-child(13)::after {
+.calendar > div:nth-child(13)::after {
   content: "13"; }
 
-div:nth-child(14)::after {
+.calendar > div:nth-child(14)::after {
   content: "14"; }
 
-div:nth-child(15)::after {
+.calendar > div:nth-child(15)::after {
   content: "15"; }
 
-div:nth-child(16)::after {
+.calendar > div:nth-child(16)::after {
   content: "16"; }
 
-div:nth-child(17)::after {
+.calendar > div:nth-child(17)::after {
   content: "17"; }
 
-div:nth-child(18)::after {
+.calendar > div:nth-child(18)::after {
   content: "18"; }
 
-div:nth-child(19)::after {
+.calendar > div:nth-child(19)::after {
   content: "19"; }
 
-div:nth-child(20)::after {
+.calendar > div:nth-child(20)::after {
   content: "20"; }
 
-div:nth-child(21)::after {
+.calendar > div:nth-child(21)::after {
   content: "21"; }
 
-div:nth-child(22)::after {
+.calendar > div:nth-child(22)::after {
   content: "22"; }
 
-div:nth-child(23)::after {
+.calendar > div:nth-child(23)::after {
   content: "23"; }
 
-div:nth-child(24)::after {
+.calendar > div:nth-child(24)::after {
   content: "24"; }
 
-div:nth-child(25)::after {
+.calendar > div:nth-child(25)::after {
   content: "25"; }
 
-div:nth-child(26)::after {
+.calendar > div:nth-child(26)::after {
   content: "26"; }
 
-div:nth-child(27)::after {
+.calendar > div:nth-child(27)::after {
   content: "27"; }
 
-div:nth-child(28)::after {
+.calendar > div:nth-child(28)::after {
   content: "28"; }
 
-div:nth-child(29)::after {
+.calendar > div:nth-child(29)::after {
   content: "29"; }
 
-div:nth-child(30)::after {
+.calendar > div:nth-child(30)::after {
   content: "30"; }
 
-div:nth-child(31)::after {
+.calendar > div:nth-child(31)::after {
   content: "31"; }
 
 .calendar-tue div:first-child {
@@ -155,11 +161,5 @@ div:nth-child(31)::after {
 
 .calendar-31 div:nth-child(-n+31) {
   display: block; }
-
-.calendar > div:hover {
-  margin-top: -20px;
-  background-color: pink;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
 
 /*# sourceMappingURL=main.css.map */
